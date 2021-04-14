@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="app/img/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Alwin - Portfolio</title>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="font/vogue.css">
+  <!-- <link href="http://fonts.cdnfonts.com/css/vogue" rel="stylesheet"> -->
+  <!-- CDN Animation Library
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+  <!-- Local Animation Library -->
+  <link href="dist/aos.css" rel="stylesheet">
+  <script src="dist/aos.js"></script>
+  <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <!-- Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+
+</head>
+
+<body id="body">
+  <div id="app">
+
+    <!-- Bg Elements -->
+    <img src="app/img/bg-dots.svg" alt="" id="bg-one" data-aos="fade-in" data-aos-delay="750" data-aos-duration="2000">
+
+    <!-- Bg Elements -->
+    <img src="app/img/bg-dots.svg" alt="" id="bg-two" data-aos="fade-in" data-aos-delay="750" data-aos-duration="2000">
+
+    <!-- Bg Elements -->
+    <img src="app/img/bg-dots.svg" alt="" id="bg-three" data-aos="fade-in" data-aos-delay="750"
+      data-aos-duration="2000">
+
+    <!-- Quote Component -->
+    <div class="quote">
+      <h3 id="quote-content">Design is not just what it looks like and feels like. Design is how it works. <span
+          class="quote-person">- Steve Jobs</span></h3>
+      <p id="quote-person"></p>
+    </div>
+
+    <!-- Hero Component -->
+    <section class="hero">
+      <div class="desktop-hero">
+        <div class="hero-img" data-aos="fade-up" data-aos-delay="250" data-aos-duration="650">
+          <img src="app/img/profile.jpeg" alt="Alwin Sunil Profile" id="hero-img">
+        </div>
+        <div class="desktop-hero-right">
+          <div class="hero-heading" data-aos="fade-in" data-aos-delay="750" data-aos-duration="750">
+            <div class="wrapper">
+              <h4 id="h4-hero">Hey, this is </h4>
+              <div class="inner-wrapper" id="inner-wrapper">
+                <span class="link" id="name-link">Alwin</span>
+                <div class="highlight" id="highlight"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-content" data-aos="fade-in" data-aos-duration="2000">
+            <p>A high school student who spents his time figuring out <strong>tech</strong> and <strong>life</strong>.
+              How is looking forward to be a Frontend Software dev.</p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div class="hero-btn-column-one">
+          <button class="location btn" data-aos="fade-up" data-aos-duration="500">
+            <img src="app/icons/location.svg" alt="">
+            <label for="">Calicut, Kerala</label>
+          </button>
+        </div>
+        <div class="hero-btn-column-two" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
+          <button class="designation btn">
+            <img src="app/icons/frontend.svg" alt="">
+            <label for="">Frontend Dev</label>
+          </button>
+          <button class="occupation btn" disabled>
+            <img src="app/icons/book.svg" alt="">
+            <label for="">Student</label>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Component -->
+    <section class="portfolio component">
+      <div class="component-tittle" data-aos="fade-in" data-aos-duration="750">
+        <h1 class="title-h1">Portfolio</h1>
+        <p class="title-p">Most Recent Works</p>
+      </div>
+      <div class="works">
+        <div class="work work-first">
+          <div class="work work-img" data-aos="fade-up" data-aos-duration="500">
+            <img src="app/img/work-1.png" alt="Bookmark Frontend Mentor">
+          </div>
+          <div class="work-content">
+            <h4 data-aos="fade-up" data-aos-duration="500">Bookmark Landing Page<span>*</span></h4>
+            <p data-aos="fade-up" data-aos-duration="500">Challange from <a href="http://https://www.frontendmentor.io/"
+                target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
+            <div class="work-actions" data-aos="fade-up" data-aos-duration="500">
+              <a href="http://google.com" target="_blank" rel="noopener noreferrer" class="btn live-btn work-btn">
+                <img src="app/icons/live.svg" alt="live">
+                <label for="">Demo</label>
+              </a>
+              <a href="http://google.com" target="_blank" rel="noopener noreferrer" class="btn github-btn work-btn">
+                <img src="app/icons/github.svg" alt="alwinsunil Github">
+                <label for="">Github</label>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="work work-second">
+          <div class="work work-img" data-aos="fade-up" data-aos-duration="500">
+            <img src="app/img/work-2.png" alt="Fylo Frontend Mentor">
+          </div>
+          <div class="work-content">
+            <h4 data-aos="fade-up" data-aos-duration="500">Fylo Landing Page<span>*</span></h4>
+            <p data-aos="fade-up" data-aos-duration="500">Challange from <a href="http://https://www.frontendmentor.io/"
+                target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
+            <div class="work-actions" data-aos="fade-up" data-aos-duration="500">
+              <a href="http://google.com" target="_blank" rel="noopener noreferrer" class="btn live-btn work-btn">
+                <img src="app/icons/live.svg" alt="live">
+                <label for="">Demo</label>
+              </a>
+              <a href="https://github.com/AlwinSunil/fylo-landing-page/" target="_blank" rel="noopener noreferrer"
+                class="btn github-btn work-btn">
+                <img src="app/icons/github.svg" alt="alwinsunil Github">
+                <label for="">Github</label>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="disclaimer" data-aos="fade-in" data-aos-delay="250" data-aos-duration="750">
+        <p><span>*</span>These are not real projects, these are just mockups.</p>
+      </div>
+    </section>
+
+    <!-- Technologies Used Component -->
+    <section class="technology component">
+      <div class="component-tittle" data-aos="fade-in" data-aos-delay="100" data-aos-duration="750">
+        <h1 class="title-h1">technologies</h1>
+        <p class="title-p">which I am familiar with.</p>
+      </div>
+      <div class="icons-conatiner">
+        <div class="icons-column-one">
+          <img class="tech-icon icon-sm" src="app/icons/html5.svg" alt="" data-aos="fade-up" data-aos-delay="200"
+            data-aos-duration="500">
+          <img class="tech-icon icon-sm" src="app/icons/css3.svg" alt="" data-aos="fade-up" data-aos-delay="300"
+            data-aos-duration="500">
+          <img class="tech-icon icon-sm" src="app/icons/js-sheild.svg" alt="" data-aos="fade-up" data-aos-delay="400"
+            data-aos-duration="500">
+        </div>
+        <div class="icons-column-two">
+          <img class="tech-icon icon-lg" src="app/icons/bootstrap.svg" alt="" data-aos="fade-up" data-aos-delay="500"
+            data-aos-duration="500">
+          <img class="tech-icon icon-lg" src="app/icons/sass.svg" alt="" data-aos="fade-up" data-aos-delay="600"
+            data-aos-duration="500">
+          <img class="tech-icon icon-lg" src="app/icons/firebase.svg" alt="" data-aos="fade-up" data-aos-delay="700"
+            data-aos-duration="500">
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section class="connect component">
+      <h2 data-aos="fade-in" data-aos-duration="750">connect with me</h2>
+      <p class="connect-email" data-aos="fade-up" data-aos-duration="750">
+        <img src="app/icons/email.svg" alt="" class="email-icon">
+        <a href="mailto: alv12alwin@gmail.com" target="_blank" rel="noopener noreferrer"
+          class="email-contact">alv12alwin@gmail.com</a>
+      </p>
+      <div class="social-icons">
+        <a href="http://github.com/alwinsunil" target="_blank" rel="noopener noreferrer" class="social-icon"
+          data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
+          <img src="app/icons/github.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/mr_alwin_/" target="_blank" rel="noopener noreferrer" class="social-icon"
+          data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+          <img src="app/icons/instagram.svg" alt="">
+        </a>
+        <a href="https://twitter.com/mr_alwin_" target="_blank" rel="noopener noreferrer" class="social-icon"
+          data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+          <img src="app/icons/twitter.svg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer Component-->
+    <section class="footer component">
+      <div class="footer-logo" data-aos="fade-in" data-aos-duration="750">
+        <div class="wrapper">
+          <div class="inner-wrapper">
+            <span class="link footer-link" id="name-link">Alwin</span>
+            <div class="highlight" id="highlight-footer"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="footer-items">
+        <li class="footer-item footer-home" data-aos="fade-in" data-aos-delay="100" data-aos-duration="250"><a href="">Home</a></li>
+        <li class="footer-item" data-aos="fade-in" data-aos-delay="200" data-aos-duration="250"><a href="">Works</a>
+        </li>
+        <li class="footer-item footer-contact" data-aos="fade-in" data-aos-delay="300" data-aos-duration="250"><a href="">Contact</a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- Watermark -->
+  <div class="watermark">
+    <p>Designed and Created by</p>
+    <h4><a href="#">Alwin Sunil</a></h4>
+  </div>
+
+  <!-- Loading Wrapper -->
+  <div class="loader-wrapper" id="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <!-- Script files -->
+  <script type="module" src="app/js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
