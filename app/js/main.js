@@ -33,7 +33,7 @@ document.getElementById("h4-hero").style.width = h4DivWidth + "px";
 
 // Hightlight Element
 var nameWidth = document.getElementById("name-link").offsetWidth;
-var highlightWidth = nameWidth + (20 / 100) * nameWidth;
+var highlightWidth = nameWidth + (15 / 100) * nameWidth;
 document.getElementById("highlight").style.width = highlightWidth + "px";
 document.getElementById("highlight-footer").style.width = highlightWidth + "px";
 
