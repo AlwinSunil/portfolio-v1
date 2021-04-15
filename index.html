@@ -3,22 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="app/img/favicon.png" />
+  <link rel="shortcut icon apple-touch-icon" type="image/png" href="favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Alwin - Portfolio</title>
+  <meta name="Alwin Sunil" content="Hey! I am 16 year old tech enthusiast from Kerala" content="mr_alwin_"
+    content="Alwin Sunil Kannezhath" content="Instagram | Github | Twitter"
+    content="Frontend developer from Calicut, Kerala" content="github.com/alwinsunil"/>
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="font/vogue.css"> -->
   <link href="http://fonts.cdnfonts.com/css/vogue" rel="stylesheet">
   <!-- CDN Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Local Animation Library -->
-  <!-- <link href="dist/aos.css" rel="stylesheet">
-  <script src="dist/aos.js"></script> -->
   <!-- Firebase App -->
   <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <!-- Firebase Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
   <!-- Firestore -->
   <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
 
@@ -39,13 +40,13 @@
 
     <!-- Quote Component -->
     <div class="quote">
-      <h3 id="quote-content">Design is not just what it looks like and feels like. Design is how it works. <span
-          class="quote-person">- Steve Jobs</span></h3>
+      <h3 class="quote-anim" id="quote-content">Design is not just what it looks like and feels like. Design is how it
+        works. </h3>
       <p id="quote-person"></p>
     </div>
 
     <!-- Hero Component -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="desktop-hero">
         <div class="hero-img" data-aos="fade-up" data-aos-delay="250" data-aos-duration="650">
           <img src="app/img/profile.jpeg" alt="Alwin Sunil Profile" id="hero-img">
@@ -62,7 +63,7 @@
           </div>
           <div class="hero-content" data-aos="fade-in" data-aos-duration="2000">
             <p>A high school student who spents his time figuring out <strong>tech</strong> and <strong>life</strong>.
-              How is looking forward to be a Frontend Software dev.</p>
+              How is looking forward to achieve dreams.</p>
           </div>
         </div>
       </div>
@@ -88,7 +89,7 @@
         <h1 class="title-h1">technologies</h1>
         <p class="title-p">which I am familiar with.</p>
       </div>
-      <div class="icons-conatiner">
+      <div class="icons-container">
         <img class="tech-icon icon-sm" src="app/icons/html5.svg" alt="" data-aos="fade-up" data-aos-delay="200"
           data-aos-duration="500">
         <img class="tech-icon icon-sm" src="app/icons/css3.svg" alt="" data-aos="fade-up" data-aos-delay="300"
@@ -105,7 +106,7 @@
     </section>
 
     <!-- Portfolio Component -->
-    <section class="portfolio component">
+    <section class="portfolio component" id="works">
       <div class="component-tittle" data-aos="fade-in" data-aos-duration="750">
         <h1 class="title-h1">Portfolio</h1>
         <p class="title-p">Most Recent Works</p>
@@ -164,7 +165,7 @@
     </section>
 
     <!-- Connect -->
-    <section class="connect component">
+    <section class="connect component" id="connect">
       <h2 data-aos="fade-in" data-aos-duration="750">connect with me</h2>
       <p class="connect-email" data-aos="fade-up" data-aos-duration="750">
         <img src="app/icons/email.svg" alt="" class="email-icon">
@@ -189,7 +190,7 @@
 
     <!-- Footer Component-->
     <section class="footer component">
-      <div class="footer-logo" data-aos="fade-in" data-aos-duration="750">
+      <div class="footer-logo" data-aos="fade-in" data-aos-duration="750" id="footer-logo">
         <div class="wrapper">
           <div class="inner-wrapper">
             <span class="link footer-link" id="name-link">Alwin</span>
@@ -199,13 +200,13 @@
       </div>
       <ul class="footer-items">
         <li class="footer-item footer-home" data-aos="fade-in" data-aos-delay="100" data-aos-duration="250">
-          <a href="">Home</a>
+          <a href="#home">Home</a>
         </li>
         <li class="footer-item" data-aos="fade-in" data-aos-delay="200" data-aos-duration="250">
-          <a href="">Works</a>
+          <a href="#works">Works</a>
         </li>
         <li class="footer-item footer-contact" data-aos="fade-in" data-aos-delay="300" data-aos-duration="250">
-          <a href="">Contact</a>
+          <a href="#connect">Connect</a>
         </li>
       </ul>
     </section>

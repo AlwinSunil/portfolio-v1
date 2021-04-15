@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,6 +78,22 @@ a {
 
 li {
   list-style: none;
+}
+
+a {
+  transition: all 200ms linear;
+}
+
+img {
+  transition: all 500ms ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.025);
+}
+
+img:hover {
+  transform: scale(1.05);
 }
 
 // Preloader
@@ -162,7 +182,8 @@ li {
   background-image: url("/app/img/quote.svg");
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  background-size: 15% 50%;
+  background-size: 1rem 3rem;
+  text-align: center;
 }
 
 .quote h3 {
@@ -170,6 +191,11 @@ li {
   font-family: 'Vogue', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.quote h3,
+.quote p {
+  display: inline;
 }
 
 .quote-person {
@@ -183,12 +209,12 @@ li {
 }
 
 #quote-person {
-  padding: 0;
+  padding: 0px;
   text-align: center;
   color: $white;
   font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
-  padding: 0px;
+  padding-top: 0.25rem;
   opacity: 85%;
 }
 
@@ -248,12 +274,12 @@ li {
 }
 
 // Desktop Layout 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 700px) {
   .quote {
-    background-size: 4% 80%;
+    background-position: 15% 0%;
+    background-size: 3rem auto;
   }
 
-  // Classes
   .title-h1 {
     font-weight: 700;
     text-transform: lowercase;
@@ -464,7 +490,7 @@ li {
   }
 
   .portfolio {
-    background-color: $white;
+    background-color: $neutral-greyWhite;
     color: $secondray-darkBlue;
   }
 
@@ -532,8 +558,9 @@ li {
   }
 
   .live-btn {
-    background-color: $neutral-greyWhite;
+    margin-left: 10%;
     margin-right: 0.25rem;
+    background-color: $white;
   }
 
   .live-btn img {
@@ -541,15 +568,15 @@ li {
   }
 
   .github-btn {
+    margin-right: 10%;
+    margin-left: 0.25rem;
     background-color: $neutral-blackGrey;
     border: 0px;
-    margin-left: 0.25rem;
   }
 
   .github-btn label {
     color: $white;
   }
-
 
   .work-content span,
   .disclaimer span {
@@ -579,7 +606,7 @@ li {
     background-color: $white;
   }
 
-  .icons-conatiner {
+  .icons-container {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -667,7 +694,12 @@ li {
   }
 
   .email-icon {
+    transition: none;
     height: 2rem;
+  }
+
+  .email-icon:hover {
+    transform: scale(1);
   }
 
   .connect h2 {
@@ -697,7 +729,7 @@ li {
   }
 
   .social-icon img {
-    height: 2.5rem;
+    height: 2.25rem;
   }
 
   .footer {
@@ -772,9 +804,12 @@ li {
 }
 
 // Mobile Layout
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
+  .quote {
+    background-position: 100% 100%;
+    background-size: auto auto!important;
+  }
 
-  // Classes
   .title-h1 {
     font-weight: 700;
     text-transform: lowercase;
@@ -837,6 +872,7 @@ li {
     font-weight: 500;
     opacity: 90%;
     display: flex;
+    justify-content: center;
     margin-right: -0.5rem;
     color: $primary-blue;
     text-transform: lowercase;
@@ -954,7 +990,7 @@ li {
   }
 
   .portfolio {
-    background-color: $white;
+    background-color: $neutral-greyWhite;
     color: $secondray-darkBlue;
   }
 
@@ -1001,7 +1037,7 @@ li {
   }
 
   .live-btn {
-    background-color: $neutral-greyWhite;
+    background-color: $white;
     margin-right: 0.25rem;
   }
 
@@ -1047,11 +1083,15 @@ li {
     background-color: $white;
   }
 
-  .icons-conatiner {
+  .icons-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 3.5rem 5vh;
   }
 
   .tech-icon {
+    margin: auto;
     height: 4rem;
     width: 4rem;
   }
@@ -1063,6 +1103,7 @@ li {
 
   .icon-lg {
     padding: 0rem 0.5rem;
+    margin-top: 2vw;
   }
 
   .icons-column-one {
@@ -1130,7 +1171,12 @@ li {
   }
 
   .email-icon {
+    transition: none;
     height: 2rem;
+  }
+
+  .email-icon:hover {
+    transform: scale(1);
   }
 
   .connect h2 {
@@ -1160,7 +1206,7 @@ li {
   }
 
   .social-icon img {
-    height: 2.5rem;
+    height: 2.25rem;
   }
 
 
