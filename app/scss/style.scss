@@ -179,7 +179,7 @@ img:hover {
   position: relative;
   padding: 1rem;
   background-color: $primary-purple;
-  background-image: url("/app/img/quote.svg");
+  background-image: url("https://raw.githubusercontent.com/AlwinSunil/portfolio/c2492e5d5ecd0adf041d5af2cf80f04880f1477f/app/img/quote.svg");
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: 1rem 3rem;
@@ -508,12 +508,16 @@ img:hover {
     flex-direction: row;
   }
 
+  .work-second {
+    flex-direction: row-reverse;
+  }
+
   .work-img {
     width: 75%;
     z-index: 5;
     width: 50%;
     float: left;
-    padding: 10vh 2vw 10vh 8vw;
+    padding: 10vh 0vw 10vh 8vw;
   }
 
   .work-img img {
@@ -528,6 +532,10 @@ img:hover {
       0 10px 80px rgba(0, 0, 0, 0.05);
   }
 
+  .work-img-second {
+    padding: 10vh 8vw 10vh 0vw;
+  }
+
   .work-content {
     width: 50%;
     height: auto;
@@ -536,6 +544,10 @@ img:hover {
     display: flex;
     flex-direction: column;
     padding: 0vw 8vw 0vw 2vw;
+  }
+
+  .work-content-second {
+    padding: 0vw 2vw 0vw 8vw;
   }
 
   .work-content h4 {
