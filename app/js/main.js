@@ -1,4 +1,4 @@
-import "/dist/style.css";
+import "/app/css/style.css";
 
 // Firebase
 var firebaseConfig = {
