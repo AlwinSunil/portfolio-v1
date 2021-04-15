@@ -1,5 +1,3 @@
-import "/app/css/style.css";
-
 // Firebase
 var firebaseConfig = {
   apiKey: "AIzaSyDxXjOKHmWQ0X8MX_9p_5vdY1iJEuAb-Os",
