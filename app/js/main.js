@@ -15,14 +15,12 @@ var db = firebase.firestore();
 
 window.onload = function () {
   window.scrollTo(0, 0);
-  firebaseQuote();
   document.getElementById("loader-wrapper").style.opacity = "0";
-  setTimeout(() => {
-    document.getElementById("loader-wrapper").style.display = "none";
-  }, 500);
+  document.getElementById("loader-wrapper").style.display = "none";
   document.getElementById("body").style.height = "auto";
   document.getElementById("body").style.overflow = "auto";
   document.getElementById("body").style.overflowX = "hidden";
+  firebaseQuote();
 };
 
 // Scroll To Top
@@ -57,7 +55,8 @@ function firebaseQuote() {
       var quoteID = "quote-" + randomNum;
       var docRef = db.collection("quotes").doc(quoteID);
 
-      docRef.get()
+      docRef
+        .get()
         .then((doc) => {
           if (doc.exists) {
             var obj = doc.data();
